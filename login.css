@@ -1,0 +1,79 @@
+.login-container {
+    width: 400px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgb(253, 237, 216);
+    border-radius: 5px;
+}
+  
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.checkbox-container {
+  display: grid;
+  grid-template-columns: min-content auto;
+}
+
+input[type="checkbox"] {
+  justify-self: start;
+  margin-right: 10px;
+}
+
+.forgot-password {
+  color: blue;
+  text-decoration: underline;
+}
+
+.forgot-password:hover {
+  color: darkblue;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.signup-link a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.signup-link a:hover {
+  color: darkblue;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button-group {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+  
+button {
+    background-color: #2b0c0c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: #3e8e41;
+}

@@ -1,0 +1,40 @@
+body{
+    background-image: linear-gradient(to right, rgb(118, 98, 71), #150303)
+}
+.navbar {
+    background-color: burlywood;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: #150303;
+    text-decoration: none;
+    font-size:20px;
+    font-weight: bold;
+}
+.navbar a:hover {
+    background-color: #150303;
+    color: #fff;
+}
+
+.container {
+    color:aquamarine;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
