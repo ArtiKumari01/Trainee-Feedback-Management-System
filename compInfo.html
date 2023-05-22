@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Complete Info Page</title>
+    <link rel="stylesheet" href="compInfo.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+
+    <div class="navbar">
+      <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    
+    <div class="compInfo-container">
+      <h1>Complete your profile</h1>
+      <form action="http://localhost/SNTI_PROJECT/compInfo.php" method="post">
+
+        <label for="id">Trainee ID:</label>
+        <input type="text" id="id" name="id" required>
+        <br>
+        <label for="name">Trainee Name:</label>
+        <input type="text" id="name" name="nm" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="em" required>
+        <br>
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="cr" required>
+        <br>
+        <label for="sem">Semester:</label>
+        <input type="text" id="sem" name="sm" required>
+        <br>
+        <label for="guide">Guide Name:</label>
+        <input type="text" id="guide" name="gd" required>
+        <br>
+        <label for="dep">Department:</label>
+        <input type="text" id="dep" name="dp" required>
+        <br>
+
+      </form>
+    </div>
+
+  </body>
+</html>

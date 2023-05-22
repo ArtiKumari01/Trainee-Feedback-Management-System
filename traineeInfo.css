@@ -1,0 +1,42 @@
+.traineeInfo-container {
+    width: 400px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(253, 237, 216);
+    border-radius: 5px;
+}
+  
+h1 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+  
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.feedback-link {
+  text-align: center;
+  margin-top: 10px;
+}
+  
+.feedback-link a {
+  color: blue;
+  text-decoration: underline;
+}
+  
+.feedback-link a:hover {
+  color: darkblue;
+}

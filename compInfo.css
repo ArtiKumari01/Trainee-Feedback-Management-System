@@ -1,0 +1,28 @@
+.compInfo-container {
+    width: 400px;
+    margin: auto;
+    margin-top: 55px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgb(253, 237, 216);
+    border-radius: 5px;
+}
+  
+h1 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+  
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
