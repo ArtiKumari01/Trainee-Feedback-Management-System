@@ -1,12 +1,4 @@
 <?php
-$id = $_POST["id"];
-$name = $_POST["nm"];
-$contactNo = $_POST["cn"];
-$email = $_POST["em"];
-$course = $_POST["cr"];
-$sem = $_POST["sm"];
-$guide = $_POST["gd"];
-$dep = $_POST["dp"];
 
 $serv= "localhost:3306";
 $usr= "root";
@@ -15,44 +7,67 @@ $dtb= "arti";
 
 $con= new mysqli($serv,$usr,$pwd,$dtb);
 
-if ($con)
+$disp= mysqli_query($con, "select * from info_data where Email_ID ='abc@gmail.com'");
+while ($dbrow=mysqli_fetch_array($disp))
 {
-    echo "Database connected"."<br>";
-}
+
 ?>
 
-<table border=1>
-    <tr>
-        <td>TRAINEE ID</td>
-        <td>TRAINEE NAME</td>
-        <td>CONTACT NUMBER</td>
-        <td>EMAIL</td>
-        <td>COURSE</td>
-        <td>SEMESTER</td>
-        <td>GUIDE NAME</td>
-        <td>DEPARTMENT</td>
-    </tr>
+<html>
+  <head>
+    <title>Trainee Info Page</title>
+    <link rel="stylesheet" href="traineeInfo.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+
+    <div class="navbar">
+      <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    
+    <div class="traineeInfo-container">
+      <h1>Trainee Information</h1>
+      <form action="" method="">
+
+        <label for="id">Trainee ID:</label>
+        <input type="text" id="id" name="id" value="<?php echo $dbrow["Tr_ID"];?>" required>
+        <br>
+        <label for="name">Trainee Name:</label>
+        <input type="text" id="name" name="nm" value="<?php echo $dbrow["Tr_Name"];?>" required>
+        <br>
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="cn" value="<?php echo $dbrow["Contact_No"];?>" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="em" value="<?php echo $dbrow["Email_ID"];?>" required>
+        <br>
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="cr" value="<?php echo $dbrow["Tr_Course"];?>" required>
+        <br>
+        <label for="sem">Semester:</label>
+        <input type="text" id="sem" name="sm" value="<?php echo $dbrow["Tr_Sem"];?>" required>
+        <br>
+        <label for="guide">Guide Name:</label>
+        <input type="text" id="guide" name="gd" value="<?php echo $dbrow["Tr_GuideName"];?>" required>
+        <br>
+        <label for="dep">Department:</label>
+        <input type="text" id="dep" name="dp" value="<?php echo $dbrow["Tr_Dep"];?>" required>
+        <br>
+
+        <div class="feedback-link">
+          <a href="feedback.html" class="text feedback-link">Click here to fill feedback</a>
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>
 
 <?php
-$ins= mysqli_query($con, "insert into info_data values('$id', '$name', '$contactNumber', '$email', '$course', '$sem', '$guide', '$dep')");
-echo "Record inserted successfully";
-
-$display= mysqli_query($con, "select * from info_data");
-while ($dbrow=mysqli_fetch_array($display))
-{
-?>
-
-    <tr>
-        <td><?php echo $dbrow["Tr_ID"];?></td>
-        <td><?php echo $dbrow["Tr_Name"];?></td>
-        <td><?php echo $dbrow["Email_ID"];?></td>
-        <td><?php echo $dbrow["Tr_Sem"];?></td>
-        <td><?php echo $dbrow["Tr_GuideName"];?></td>
-        <td><?php echo $dbrow["Tr_Dep"];?></td>
-    </tr>
-
-<?php
 }
 ?>
-
-</table>

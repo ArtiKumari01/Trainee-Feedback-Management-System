@@ -1,6 +1,7 @@
 <?php
 $email = $_POST["em"];
 $password = $_POST["pd"];
+$_session =
 
 $serv= "localhost:3306";
 $usr= "root";
