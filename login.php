@@ -1,7 +1,8 @@
 <?php
+session_start();
 $email = $_POST["em"];
 $password = $_POST["pd"];
-$_session =
+$_SESSION["uid"]= $email;
 
 $serv= "localhost:3306";
 $usr= "root";
@@ -10,13 +11,27 @@ $dtb= "arti";
 
 $con= new mysqli($serv,$usr,$pwd,$dtb);
 
-$disp= mysqli_query($con, "select * from signup_data where Email='$email' and Password='$password'");
+$disp= mysqli_query($con, "select * from signup_data where Email_ID='$email' and Password='$password'");
 if(mysqli_num_rows($disp)==1)
 {
-    echo "Login Successfully!";
+    $disp1 = mysqli_query($con, "select * from info_data where Email_ID='$email'");
+    if(mysqli_num_rows($disp1)>=1)
+    {
+        $_SESSION["uid"]= $email;
+        header('Location:http://localhost/SNTI_PROJECT/traineeInfo.php');
+    }
+    else{
+        $_SESSION["uid"]= $email;
+        header('Location:http://localhost/SNTI_PROJECT/compInfo.html');
+    }
 }
 else{
-    echo "Invalid credential!";
-}
+?>
 
+    <html>
+        <p style="text-align:center;color:red">Invalid Credential !<a href="login.html"> Click here</a> to login again.</p>
+    </html>
+
+<?php
+}
 ?>
