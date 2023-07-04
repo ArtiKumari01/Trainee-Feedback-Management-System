@@ -1,0 +1,37 @@
+        <p>How would you rate the overall training :</p>
+        <div class="rating">
+          <input type="radio" name="rating" id="star5" value="5">
+          <label for="star5"></label>
+          <input type="radio" name="rating" id="star4" value="4">
+          <label for="star4"></label>
+          <input type="radio" name="rating" id="star3" value="3">
+          <label for="star3"></label>
+          <input type="radio" name="rating" id="star2" value="2">
+          <label for="star2"></label>
+          <input type="radio" name="rating" id="star1" value="1">
+          <label for="star1"></label>
+          </div>
+
+          .rating {
+            direction: rtl; /* Reverse the order of stars */
+          }
+          
+        .rating input[type="radio"] {
+            display: none; /* Hide the default radio button */
+          }
+          
+        .rating label {
+            display: inline-block;
+            width: 20px; /* Set the dimensions of the star */
+            height: 20px;
+            background-image: url('star.svg'); /* Replace 'star.svg' with your star image path */
+            background-size: cover; /* Adjust as needed */
+            cursor: pointer;
+          }
+          
+        .rating input[type="radio"]:checked + label,
+        .rating input[type="radio"]:checked + label ~ label {
+            /* Add styles to the checked radio button and preceding stars */
+            /* You can modify this to change the appearance of the checked and unchecked stars */
+            background-image: url('selected-star.png'); /* Replace 'selected-star.svg' with your selected star image path */
+          }

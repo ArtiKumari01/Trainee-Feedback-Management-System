@@ -7,16 +7,16 @@ body{
     background: rgb(118, 107, 107);
 }
 .form-container{
-    height: 900px;
+    height:1550px;
     width: 600px;
     margin: 20px auto;
 }
 .form-container form {
-    height: 850px;
+    height: 1550px;
     width: 500px;
     margin: auto;
     
-    background-image: conic-gradient(from -45deg, pink, purple);
+    background-image: conic-gradient(from -75deg, rgb(127, 117, 196), rgb(48, 6, 48));
     padding: 30px;
     text-transform: capitalize;
     border-radius: 30px;
@@ -25,7 +25,7 @@ body{
 .form-container form h3{
     text-align: center;
     font-size: 2.5rem;
-    color: purple;
+    color: rgb(48, 6, 48);
 }
 .form-container form label, p {
     font-size: 1.3rem;
@@ -55,27 +55,4 @@ body{
     margin-right: 15px;
 } 
 
-.rating {
-    direction: rtl; /* Reverse the order of stars */
-  }
-  
-.rating input[type="radio"] {
-    display: none; /* Hide the default radio button */
-  }
-  
-.rating label {
-    display: inline-block;
-    width: 20px; /* Set the dimensions of the star */
-    height: 20px;
-    background-image: url('star.svg'); /* Replace 'star.svg' with your star image path */
-    background-size: cover; /* Adjust as needed */
-    cursor: pointer;
-  }
-  
-.rating input[type="radio"]:checked + label,
-.rating input[type="radio"]:checked + label ~ label {
-    /* Add styles to the checked radio button and preceding stars */
-    /* You can modify this to change the appearance of the checked and unchecked stars */
-    background-image: url('selected-star.png'); /* Replace 'selected-star.svg' with your selected star image path */
-  }
   

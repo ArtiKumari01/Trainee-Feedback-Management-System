@@ -26,12 +26,11 @@ while ($dbrow=mysqli_fetch_array($disp))
     <div class="navbar">
       <ul>
           <li><a href="main.html">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
       </ul>
       <ul>
-            <li><a href="main.html">Logout</a></li>
+            <li><a href="login.html">Logout</a></li>
             <li><b><?php echo $dbrow["Tr_Name"];?></b></li>
         </ul>
     </div>
@@ -66,11 +65,13 @@ while ($dbrow=mysqli_fetch_array($disp))
         <br>
 
         <div class="feedback-link">
-          <a href="feed.html" class="text feedback-link">Click here to fill feedback</a>
+          <a href="feedback.php" class="text feedback-link">Click here to fill feedback</a>
         </div>
       </form>
     </div>
-
+    <footer>
+      <p>Created by <b>Arti Kumari</b> | &#169; 2023 All rights reserved.</p>
+  </footer>
   </body>
 </html>
 

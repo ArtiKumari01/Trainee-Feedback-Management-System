@@ -33,8 +33,16 @@ body{
 
 .container {
     color:aquamarine;
+    font-size: 25px;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+footer{
+    background-color: rgb(65, 34, 34);
+    color: white;
+    align-items: center;
     text-align: center;
 }
