@@ -15,10 +15,10 @@ session_start();
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
-        <ul>
+        <!-- <ul>
             <li><a href="login.html">Logout</a></li>
-            <!-- <li><b><?php echo $dbrow["Tr_Name"];?></b></li> -->
-        </ul>
+            <li><b><?php echo $dbrow["Tr_Name"];?></b></li>
+        </ul> -->
     </div>
     <div class="form-container">
       <form action="http://localhost/SNTI_PROJECT/feed.php" method="post">

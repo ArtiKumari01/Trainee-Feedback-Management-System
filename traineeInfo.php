@@ -30,7 +30,7 @@ while ($dbrow=mysqli_fetch_array($disp))
           <li><a href="contact.html">Contact Us</a></li>
       </ul>
       <ul>
-            <li><a href="login.html">Logout</a></li>
+            <li><a href="logout.php">Logout</a></li>
             <li><b><?php echo $dbrow["Tr_Name"];?></b></li>
         </ul>
     </div>

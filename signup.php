@@ -19,5 +19,7 @@ $con= new mysqli($serv,$usr,$pwd,$dtb);
 
 $ins= mysqli_query($con, "insert into signup_data values('$username', '$contactNumber', '$email', '$password')");
 echo "Signup successfully";
-
 ?>
+<html>
+    <p><a href="login.html">Click here</a> to login now</p>
+</html>
